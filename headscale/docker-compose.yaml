@@ -1,0 +1,15 @@
+
+services:
+  headscale:
+    image: headscale/headscale:latest
+    container_name: headscale
+    restart: unless-stopped
+    command: serve
+    volumes:
+      - ./config:/etc/headscale            # loads config.yaml
+      - ./data/headscale:/var/lib/headscale  # persistent database + keys
+
+    ports:
+      - "8080:8080"
+      - "9090:9090"
+

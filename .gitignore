@@ -1,0 +1,13 @@
+cat <<EOF > .gitignore
+*.key
+*.pem
+*.db
+*.sqlite
+*.sock
+*.bak
+*.log
+__pycache__/
+.env
+.env.*
+*.secret
+EOF

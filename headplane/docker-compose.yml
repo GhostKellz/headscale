@@ -1,0 +1,15 @@
+services:
+  headplane:
+    image: ghcr.io/tale/headplane:0.5.10
+    container_name: headplane
+    restart: unless-stopped
+    network_mode: host
+    volumes:
+      - ./data/headplane:/var/lib/headplane
+      - ./config/headplane.yaml:/etc/headplane/config.yaml
+      - ./config/config.yaml:/etc/headscale/config.yaml
+      - ./key.txt:/data/key.txt
+    environment:
+      TZ: America/New_York
+      ROOT_API_KEY: SECRET-ROOT-API
+      headscale_api_key: PUT-YOUR-HS-API-HERE

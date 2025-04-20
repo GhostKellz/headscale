@@ -1,0 +1,20 @@
+                                                                                  
+version: '3.9'
+
+services:
+  derper:
+    image: fredliang/derper
+    container_name: derper
+    ports:
+      - "443:443"
+      - "3478:3478/udp"
+    environment:
+      - DERP_HOSTNAME=relay.cktechx.io
+      - DERP_ADDR=:443
+      - DERP_STUN_PORT=3478
+      - DERP_CERT_MODE=letsencrypt
+      - DERP_LETSENCRYPT_CACHE=/cache
+      - DERP_LETSENCRYPT_EMAIL=certs@cktechx.com
+    volumes:
+      - ./cache:/cache
+    restart: unless-stopped
