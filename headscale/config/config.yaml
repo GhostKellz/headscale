@@ -35,7 +35,7 @@ prefixes:
   # Strategy used for allocation of IPs to nodes, available options:
   # - sequential (default): assigns the next free IP from the previous given IP.
   # - random: assigns the next free IP from a pseudo-random IP generator (crypto/rand).
-  allocation: sequential
+  allocation: random
 
 # DERP is a relay system that Tailscale uses when a direct
 # connection cannot be established.
@@ -47,22 +47,14 @@ prefixes:
 derp:
   server:
     enabled: false
-    region_id: 999
-    region_code: "headscale"
-    region_name: "Headscale Embedded DERP"
-#    stun_listen_addr: "0.0.0.0:3478"
-#    private_key_path: /var/lib/headscale/derp_server_private.key
-#    automatically_add_embedded_derp_region: true
-#    ipv4: 74.50.83.131
-#    ipv6: 2001:db8::1
-
   urls:
-    - https://controlplane.tailscale.com/derpmap/default
+    - https://controlpane.cktechx.io
 
-  paths:
-    - /etc/headscale/derp-map.yaml
+  update_frequency: 24h
 
-  auto_update_enabled: false
+# Time before an inactive ephemeral node is deleted?
+ephemeral_node_inactivity_timeout: 30m
+  auto_update_enabled: true
 
   # How often should we check for DERP updates?
   update_frequency: 24h

@@ -1,0 +1,20 @@
+  GNU nano 7.2                                                                                                                          docker-compose.yml                                                                                                                                    
+version: '3.7'
+
+services:
+  derper:
+    image: fredliang/derper:latest
+    container_name: hs-derp
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+      - "3478:3478/udp"
+    volumes:
+      - ./data:/data
+    environment:
+      - DERP_DOMAIN=home.cktechx.io
+      - DERP_ADDR=:443
+      - DERP_REGION_NAME=home-relay
+      - DERP_STUN=true
+      - DERP_ENABLE_LETSENCRYPT=true

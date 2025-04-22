@@ -1,0 +1,8 @@
+#This section in your config.yaml for headscale
+derp:
+  server:
+    enabled: false
+  paths:
+    - ./derp/derp-map.yaml
+  auto_update_enabled: true
+  update_frequency: 24h

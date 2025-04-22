@@ -8,7 +8,7 @@ sleep 3
 
 # Generate API key if file doesn't exist
 if [ ! -f /etc/headscale/headscale_api_key.txt ]; then
-    headscale apikeys create --expiration 8760h --reusable > /etc/headscale/headscale_api_key.txt
+    headscale apikeys create --expiration 0d --reusable > /etc/headscale/headscale_api_key.txt
 fi
 
 # Keep container alive

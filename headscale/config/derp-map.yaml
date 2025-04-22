@@ -1,17 +1,23 @@
-derp:
-  server:
-    enabled: false
-    region_id: 999
-    region_code: "relay"
-    region_name: "CKTech Relay"
-    stun_listen_addr: "0.0.0.0:3478"
-    private_key_path: /var/lib/headscale/derp_server_private.key
-    automatically_add_embedded_derp_region: true
-    ipv4: 192.168.1.1
-    # ipv6: 2001:db8::1
+  GNU nano 7.2                                                                                                                             derp-map.yaml                                                                                                                                      
+Regions:
+  - RegionID: 900
+    RegionCode: "home"
+    RegionName: "CKTech Home"
+    Nodes:
+      - Name: "home-relay"
+        RegionID: 900
+        HostName: "home.cktechx.io"
+        IPv4: "68.238.54.36"
+        DERPPort: 443
+        STUNPort: 3478
 
-  urls: []
-  paths:
-    - /etc/headscale/derp-map.yaml
-  auto_update_enabled: true
-  update_frequency: 24h
+  - RegionID: 901
+    RegionCode: "cloud"
+    RegionName: "CKTech Cloud"
+    Nodes:
+      - Name: "cloud-relay"
+        RegionID: 901
+        HostName: "relay.cktechx.io"
+        IPv4: "198.96.95.69"
+        DERPPort: 443
+        STUNPort: 3478
