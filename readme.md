@@ -9,7 +9,9 @@
 </p>
 
 ---
-This directory contains the configuration for the self-hosted **Headscale** (control server for Tailscale-compatible networks), the **Headplane UI**, and a custom **DERP relay** fallback node.
+
+> 🛠️ **About this repository:**  
+> Self-hosted control server configuration for Tailscale-compatible networks using Headscale, WireGuard fallback VPNs, custom DERP relays, and NGINX reverse proxy management.
 
 ---
 ## 📁 Included Files
