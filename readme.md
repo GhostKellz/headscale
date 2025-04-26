@@ -1,9 +1,17 @@
-# CKTechX Headscale Setup
+# CK Technology Headscale Setup
+---
+<p align="center">
+  <img src="https://img.shields.io/badge/Headscale-Control_Server-2aa198"/> &nbsp;&nbsp;
+  <img src="https://img.shields.io/badge/DERP-Relay_Map-blue"/> &nbsp;&nbsp;
+  <img src="https://img.shields.io/badge/WireGuard-VPN-88171a?logo=wireguard&logoColor=white"/> &nbsp;&nbsp;
+  <img src="https://img.shields.io/badge/NGINX-Reverse_Proxy-009639?logo=nginx&logoColor=white"/> &nbsp;&nbsp;
+  <img src="https://img.shields.io/badge/Optimized-⚡🚀🔒-00bcd4"/>
+</p>
 
+---
 This directory contains the configuration for the self-hosted **Headscale** (control server for Tailscale-compatible networks), the **Headplane UI**, and a custom **DERP relay** fallback node.
 
 ---
-
 ## 📁 Included Files
 
 | File                 | Description                                                 |
