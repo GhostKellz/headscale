@@ -29,6 +29,21 @@
           "STUNPort": 3478
         }
       ]
+    },
+    "902": {
+      "RegionID": 902,
+      "RegionCode": "titan",
+      "RegionName": "CKTech Titan",
+      "Nodes": [
+        {
+          "Name": "titan-relay",
+          "RegionID": 902,
+          "HostName": "titan.cktechx.io",
+          "IPv4": "74.50.83.133",
+          "DERPPort": 443,
+          "STUNPort": 3478
+        }
+      ]
     }
   }
 }

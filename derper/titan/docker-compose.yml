@@ -1,4 +1,3 @@
-
 services:
   derper:
     image: fredliang/derper:latest
@@ -6,8 +5,8 @@ services:
     restart: unless-stopped
     network_mode: host
     environment:
-      - DERP_DOMAIN=home.cktechx.io
+      - DERP_DOMAIN=titan.cktechx.io
       - DERP_ADDR=:8443
-      - DERP_REGION_NAME=CKTech Home
+      - DERP_REGION_NAME=CKTech Titan
       - DERP_STUN=true
       - DERP_ENABLE_LETSENCRYPT=false
